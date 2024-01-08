@@ -33,8 +33,8 @@ var programCode = function(processingInstance) {
         this.width = 0.5 * obj2.width;
         this.y = obj2.y + 0.25 * obj2.height;
         this.height = 0.5 * obj2.height;
-        fill(0, 205, 205);
-        rect(this.x, this.y, this.width, this.height);
+        //fill(0, 205, 205);
+        //rect(this.x, this.y, this.width, this.height);
       }
       Box2 = new box2();
       var box3 = function() {
@@ -51,8 +51,8 @@ var programCode = function(processingInstance) {
         this.width = 0.50 * obj2.width;
         this.y = obj2.y + 0.25 * obj2.height;
         this.height = 0.5 * obj2.height;
-        fill(0, 255, 0);
-        rect(this.x, this.y, this.width, this.height);
+        //fill(0, 255, 0);
+        //rect(this.x, this.y, this.width, this.height);
       }
       Box4 = new box4();
 
