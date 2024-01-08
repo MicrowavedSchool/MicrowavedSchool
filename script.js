@@ -619,6 +619,15 @@ var programCode = function(processingInstance) {
     };
 
     AbyssEnemies = [];
+
+    var gruntEnemy1 = function(config){
+      this.x = config.x;
+      this.y = config.y;
+      this.width = config.width || 45;
+      this.height = config.height || 45;
+      this.health = config.health || 50;
+    }
+      
     var LevelLevelMap = [
       {
         map: [
