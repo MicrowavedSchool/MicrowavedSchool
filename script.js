@@ -1215,7 +1215,8 @@ var programCode = function(processingInstance) {
       for (var abyssEnemyNum = 0; abyssEnemyNum < AbyssEnemies[l].length; abyssEnemyNum++) {
         for (var shotNum = 0; shotNum < AbyssEnemies[l][abyssEnemyNum].bullets.length; shotNum++) {
           for (var playerNum = 0; playerNum < Players[l].length; playerNum++) {
-            AbyssEnemies[l][abyssEnemyNum].bullets[shotNum].collide(Players[l][playerNum]);
+            if(AbyssEnemies[l][abyssEnemyNum].health > 0)
+              AbyssEnemies[l][abyssEnemyNum].bullets[shotNum].collide(Players[l][playerNum]);
           }
         }
       }
