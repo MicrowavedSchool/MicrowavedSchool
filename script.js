@@ -626,6 +626,20 @@ var programCode = function(processingInstance) {
       this.width = config.width || 45;
       this.height = config.height || 45;
       this.health = config.health || 50;
+      this.img = loadImage("bat2.png");
+
+      this.xVelocity = 0;
+      this.yVelocity = 0;
+      this.poi = [0, 0];
+      this.stunTime = 0;
+    }
+
+    gruntEnemy.prototype.display = function(){
+      this.y = constrain(this.y, 20, height - this.height);
+      this.x = constrain(this.x, 10, width - (this.width));
+
+      
+      noStroke();
     }
       
     var LevelLevelMap = [
