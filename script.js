@@ -625,6 +625,7 @@ var programCode = function(processingInstance) {
       this.height = config.height || 45;
       this.health = config.health || 50;
       this.img = loadImage("bat2.png");
+      this.img2 = loadImage("");
 
       this.xVelocity = 0;
       this.yVelocity = 0;
