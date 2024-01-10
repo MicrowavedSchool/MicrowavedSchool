@@ -636,6 +636,8 @@ var programCode = function(processingInstance) {
       this.y = constrain(this.y, 20, height - this.height);
       this.x = constrain(this.x, 10, width - (this.width));
 
+      fill(255,255,255);
+      rect(this.x,this.y,this.width,this.height);
       if (Math.atan2(this.poi[1], this.poi[0]) > -Math.PI / 2 && Math.atan2(this.poi[1], this.poi[0]) <= Math.PI / 2)
         image(this.img2, this.x - 0, this.y - 0, this.width + 0, this.height + 0);
       else
