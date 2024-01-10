@@ -632,11 +632,15 @@ var programCode = function(processingInstance) {
       this.stunTime = 0;
     }
 
-    gruntEnemy.prototype.display = function(){
+    gruntEnemy1.prototype.display = function(){
       this.y = constrain(this.y, 20, height - this.height);
       this.x = constrain(this.x, 10, width - (this.width));
 
-      
+      if (Math.atan2(this.poi[1], this.poi[0]) > -Math.PI / 2 && Math.atan2(this.poi[1], this.poi[0]) <= Math.PI / 2)
+        image(this.img2, this.x - 0, this.y - 0, this.width + 0, this.height + 0);
+      else
+        image(this.img, this.x - 0, this.y - 0, this.width + 0, this.height + 0);
+
       noStroke();
     }
       
