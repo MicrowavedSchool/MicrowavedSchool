@@ -171,8 +171,6 @@ var programCode = function(processingInstance) {
         this.dead = true;
       fill(255, 0, 0);
       rect(20, 25, globalHealth * 25, 10);
-      text(globalHealth, 200, 200, 200, 200);
-
 
       this.punch.parentX = this.x + 0.15 * this.width;
       this.punch.parentY = this.y + 0.15 * this.height;
