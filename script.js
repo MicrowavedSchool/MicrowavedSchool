@@ -1,5 +1,6 @@
 var programCode = function(processingInstance) {
   with (processingInstance) {
+    /*
     size(600, 600);
     frameRate(30);
     //----------------------------------------------
@@ -1274,6 +1275,7 @@ var programCode = function(processingInstance) {
 
     }
     //----------------------------------------------
+    */
   }
 };
 const Canvas = document.createElement("canvas");
