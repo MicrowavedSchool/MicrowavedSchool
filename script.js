@@ -1,8 +1,9 @@
 var programCode = function(processingInstance) {
   with (processingInstance) {
-    /*
+    
     size(600, 600);
     frameRate(30);
+    /*
     //----------------------------------------------
     var Level = 2;
     var MapLocation = [0, 1];
