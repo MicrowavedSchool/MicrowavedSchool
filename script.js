@@ -712,7 +712,7 @@ var programCode = function(processingInstance) {
           "                                        ",
           "                                        ",
           "                                        ",
-          "                                ^       ",
+          "                                        ",
           "                                        ",
           "                                        ",
           "                                        ",
