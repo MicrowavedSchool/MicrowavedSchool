@@ -618,7 +618,7 @@ var programCode = function(processingInstance) {
       this.shotCd -= 1;
     };
 
-    AbyssEnemies = [];
+    var AbyssEnemies = [];
 
     var gruntEnemy1 = function(config){
       this.x = config.x;
@@ -670,6 +670,8 @@ var programCode = function(processingInstance) {
         this.jumping = false;
       }
     }
+
+    var GruntEnemy1s = [];
 
     var LevelLevelMap = [
       {
@@ -1194,6 +1196,14 @@ var programCode = function(processingInstance) {
           AbyssEnemies[l][abyssEnemies].display();
         }
       }
+      /*
+      for (var gruntEnemy1s = 0; gruntEnemy1s < GruntEnemy1s[l].length; gruntEnemy1s++) {
+        if(GruntEnemy1s[l][gruntEnemy1s].health > 0){
+          GruntEnemy1s[l][gruntEnemy1s].display();
+        }
+      }
+      */
+
       for (var playerNum = 0; playerNum < Players[l].length; playerNum++) {
         Players[l][playerNum].display();
         if (Players[l][playerNum].complete && Level != 0) {
