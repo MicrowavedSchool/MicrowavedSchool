@@ -464,8 +464,8 @@ var programCode = function(processingInstance) {
       this.yVelocity = 0;
       this.poi = [0, 0];
       this.stunTime = 0;
-      this.img = loadImage("bat2.png");
-      this.img2 = loadImage("bat.png");
+      this.img = loadImage("images/bat2.png");
+      this.img2 = loadImage("images/bat.png");
     };
     abyssEnemy.prototype.display = function() {
       this.y = constrain(this.y, 20, height - this.height);
@@ -631,6 +631,7 @@ var programCode = function(processingInstance) {
       this.yVelocity = 0;
       this.poi = [0, 0];
       this.stunTime = 0;
+      this.jumping = false;
     }
 
     gruntEnemy1.prototype.display = function(){
@@ -646,7 +647,28 @@ var programCode = function(processingInstance) {
 
       noStroke();
     }
+
+    gruntEnemy1.prototype.move() = function(pos1,pos2){
       
+
+      if (this.yVelocity < 9) {
+        this.yAcceleration = 2.25;
+      } else {
+        this.yAcceleration = 0;
+      }
+
+      this.x += this.xVelocity;
+      this.y += this.yVelocity;
+      this.yVelocity += this.yAcceleration;
+    }
+      
+    gruntEnemy1.prototype.jump = function(){
+      if(this.jumping){
+        this.yVelocity -= 7;
+        this.jumping = false;
+      }
+    }
+
     var LevelLevelMap = [
       {
         map: [
