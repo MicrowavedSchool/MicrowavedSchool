@@ -1165,14 +1165,12 @@ var programCode = function(processingInstance) {
                 y: Y,
               }));
               break;
-            /*
             case "*":
               GruntEnemy1s[l].push(new gruntEnemy1({
                 x: X,
                 y: Y,
               }));
               break;
-            */
           }
         }
       }
