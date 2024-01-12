@@ -1120,6 +1120,7 @@ var programCode = function(processingInstance) {
       Players[l] = [];
       Blocks[l] = [];
       AbyssEnemies[l] = [];
+      GruntEnemy1s[l] = [];
       pushBlocks[l] = [];
       lavaBlocks[l] = [];
       for (var columnNum = 0; columnNum < LevelMap[l].map.length; columnNum++) {
@@ -1158,6 +1159,12 @@ var programCode = function(processingInstance) {
               break;
             case "&":
               AbyssEnemies[l].push(new abyssEnemy({
+                x: X,
+                y: Y,
+              }));
+              break;
+            case "^":
+              GruntEnemy1s[l].push(new gruntEnemy1({
                 x: X,
                 y: Y,
               }));
