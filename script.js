@@ -671,7 +671,7 @@ var programCode = function(processingInstance) {
       }
     }
 
-   // var GruntEnemy1s = [];
+    var GruntEnemy1s = [];
 
     var LevelLevelMap = [
       {
@@ -1166,7 +1166,7 @@ var programCode = function(processingInstance) {
               }));
               break;
             /*
-            case "^":
+            case "*":
               GruntEnemy1s[l].push(new gruntEnemy1({
                 x: X,
                 y: Y,
