@@ -650,7 +650,7 @@ var programCode = function(processingInstance) {
       noStroke();
     }
 
-    gruntEnemy1.prototype.move() = function(pos1,pos2){
+    gruntEnemy1.prototype.move = function(pos1,pos2){
       
 
       if (this.yVelocity < 9) {
