@@ -464,8 +464,8 @@ var programCode = function(processingInstance) {
       this.yVelocity = 0;
       this.poi = [0, 0];
       this.stunTime = 0;
-      this.img = loadImage("images/bat2.png");
-      this.img2 = loadImage("images/bat.png");
+      this.img = loadImage("bat2.png");
+      this.img2 = loadImage("bat.png");
     };
     abyssEnemy.prototype.display = function() {
       this.y = constrain(this.y, 20, height - this.height);
