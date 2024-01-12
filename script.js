@@ -3,6 +3,8 @@ var programCode = function(processingInstance) {
     
     size(600, 600);
     frameRate(30);
+
+    background(0,0,0);
     /*
     //----------------------------------------------
     var Level = 2;
