@@ -1238,7 +1238,7 @@ var programCode = function(processingInstance) {
                 y: Y,
               }));
               break;
-            case "":
+            case "0":
               statEditBlocks[l].push(new statEditBlock({
                 x: X,
                 y: Y,
