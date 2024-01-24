@@ -404,6 +404,27 @@ var programCode = function(processingInstance) {
     };
     var lavaBlocks = [];
 
+    var statEditBlock = function(config){
+      this.x = config.x;
+      this.y = config.y;
+      this.width = config.width || 15;
+      this.height = config.height || 15;
+      this.hidden = config.hidden || false;
+    };
+    statEditBlock.prototype.display = function(){
+      noStroke();
+      fill(0, 255, 0);
+      rect(this.x, this.y, this.width, this.height);
+    }
+    statEditBlock.prototype.collide = function(object){
+      if(rectCollide(this,object)){
+        object.canDouble = true;
+        this.hidden = true;
+      }
+    }
+
+    var statEditBlocks = [];
+
     var shot = function(config) {
       this.x = config.x;
       this.y = config.y;
@@ -1170,6 +1191,7 @@ var programCode = function(processingInstance) {
       GruntEnemy1s[l] = [];
       pushBlocks[l] = [];
       lavaBlocks[l] = [];
+      statEditBlocks[l] = [];
       for (var columnNum = 0; columnNum < LevelMap[l].map.length; columnNum++) {
         for (var rowNum = 0; rowNum < LevelMap[l].map[columnNum].length; rowNum++) {
           var Y = columnNum * 15;
@@ -1214,6 +1236,13 @@ var programCode = function(processingInstance) {
               GruntEnemy1s[l].push(new gruntEnemy1({
                 x: X,
                 y: Y,
+              }));
+              break;
+            case "":
+              statEditBlocks[l].push(new statEditBlock({
+                x: X,
+                y: Y,
+                hidden: false,
               }));
               break;
           }
