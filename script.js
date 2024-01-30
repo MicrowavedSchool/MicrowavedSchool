@@ -1090,7 +1090,7 @@ var programCode = function(processingInstance) {
           "                                        ",
           "                                        ",
           "                                        ",
-          "                                        ",
+          "                     0                  ",
           "                   #####                ",
           "                    ###                 ",
           "                     #                  ",
@@ -1258,6 +1258,9 @@ var programCode = function(processingInstance) {
       for (var blockNum = 0; blockNum < Blocks[l].length; blockNum++) {
         Blocks[l][blockNum].display();
       }
+      for (var statEditBlockNum = 0; statEditBlockNum < statEditBlocks[l].length; statEditBlockNum++) {
+        statEditBlocks[l][statEditBlockNum].display();
+      }
       for (var pushBlockNum = 0; pushBlockNum < pushBlocks[l].length; pushBlockNum++) {
         pushBlocks[l][pushBlockNum].display();
       }
@@ -1326,6 +1329,15 @@ var programCode = function(processingInstance) {
           Blocks[l][blockNum].collideY(Players[l][playerNum]);
           //Players[l][playerNum].collide(Blocks[l][blockNum]);
 
+        }
+      }
+
+      for (var statEditBlockNum = 0; statEditBlockNum < statEditBlocks[l].length; statEditBlockNum++) {
+        for (var playerNum = 0; playerNum < Players[l].length; playerNum++) {
+          statEditBlocks[l][statEditBlockNum].collideX(Players[l][playerNum]);
+        }
+        for (var playerNum = 0; playerNum < Players[l].length; playerNum++) {
+          statEditBlocks[l][statEditBlockNum].collideY(Players[l][playerNum]);
         }
       }
 
