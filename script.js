@@ -1343,11 +1343,7 @@ var programCode = function(processingInstance) {
 
       for (var pushBlockNum = 0; pushBlockNum < pushBlocks[l].length; pushBlockNum++) {
         for (var playerNum = 0; playerNum < Players[l].length; playerNum++) {
-          pushBlocks[l][pushBlockNum].collideX(Players[l][playerNum]);
-        }
-        for (var playerNum = 0; playerNum < Players[l].length; playerNum++) {
-          pushBlocks[l][pushBlockNum].collideY(Players[l][playerNum]);
-          Players[l][playerNum].collide(pushBlocks[l][pushBlockNum]);
+          pushBlocks[l][pushBlockNum].collide(Players[l][playerNum]);
         }
       }
 
