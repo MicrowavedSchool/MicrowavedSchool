@@ -1334,10 +1334,7 @@ var programCode = function(processingInstance) {
 
       for (var statEditBlockNum = 0; statEditBlockNum < statEditBlocks[l].length; statEditBlockNum++) {
         for (var playerNum = 0; playerNum < Players[l].length; playerNum++) {
-          statEditBlocks[l][statEditBlockNum].collideX(Players[l][playerNum]);
-        }
-        for (var playerNum = 0; playerNum < Players[l].length; playerNum++) {
-          statEditBlocks[l][statEditBlockNum].collideY(Players[l][playerNum]);
+          statEditBlocks[l][statEditBlockNum].collide(Players[l][playerNum]);
         }
       }
 
