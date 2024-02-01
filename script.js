@@ -10,6 +10,8 @@ var programCode = function(processingInstance) {
     var l = (Level - 1);
     var globalHealth = 5;
     var keys = {};
+    var globalCanDouble = false;
+    var globalCanClimb = false;
     keyPressed = function() {
       keys[keyCode] = true;
     };
@@ -154,8 +156,8 @@ var programCode = function(processingInstance) {
 
       this.health = config.health || globalHealth;
       this.iTik = 0;
-      this.canDouble = false;
-      this.canClimb = false;
+      this.canDouble = config.canDouble;
+      this.canClimb = config.canClimb;
 
       this.checkpoint = 0;
       this.xkb = 0;
@@ -419,6 +421,7 @@ var programCode = function(processingInstance) {
     statEditBlock.prototype.collide = function(object){
       if(rectCollide(this,object)){
         object.canDouble = true;
+        globalCanDouble = true;
         this.hidden = true;
       }
     }
@@ -1206,6 +1209,8 @@ var programCode = function(processingInstance) {
                 complete: false,
                 MapLevelUp: false,
                 MapLevelDown: false,
+                canClimb: globalCanClimb,
+                canDouble: globalCanDouble,
               }));
               break;
             case "#":
@@ -1258,8 +1263,10 @@ var programCode = function(processingInstance) {
       for (var blockNum = 0; blockNum < Blocks[l].length; blockNum++) {
         Blocks[l][blockNum].display();
       }
-      for (var statEditBlockNum = 0; statEditBlockNum < statEditBlocks[l].length; statEditBlockNum++) {
-        statEditBlocks[l][statEditBlockNum].display();
+      for (var statEditBlockNum = 0; statEditBlockNum < statEditBlocks[l].length; statEditBlockNum++)
+      {
+        if(!statEditBlocks[l][statEditBlockNum].hidden)
+          statEditBlocks[l][statEditBlockNum].display();
       }
       for (var pushBlockNum = 0; pushBlockNum < pushBlocks[l].length; pushBlockNum++) {
         pushBlocks[l][pushBlockNum].display();
