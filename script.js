@@ -701,7 +701,7 @@ var programCode = function(processingInstance) {
       {
         map: [
           "45438",
-          "92671",
+          "12679",
           "44045",
         ],
       },
@@ -1280,13 +1280,13 @@ var programCode = function(processingInstance) {
           AbyssEnemies[l][abyssEnemies].display();
         }
       }
-      /*
+      
       for (var gruntEnemy1s = 0; gruntEnemy1s < GruntEnemy1s[l].length; gruntEnemy1s++) {
         if(GruntEnemy1s[l][gruntEnemy1s].health > 0){
           GruntEnemy1s[l][gruntEnemy1s].display();
         }
       }
-      */
+      
 
       for (var playerNum = 0; playerNum < Players[l].length; playerNum++) {
         Players[l][playerNum].display();
