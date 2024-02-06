@@ -669,7 +669,7 @@ var programCode = function(processingInstance) {
       if (Math.atan2(this.poi[1], this.poi[0]) > -Math.PI / 2 && Math.atan2(this.poi[1], this.poi[0]) <= Math.PI / 2)
         image(this.img2, this.x - 0, this.y - 0, this.width + 0, this.height + 0);
       else
-        image(this.img, this.x - 0, this.y - 0, this.width + 0, this.height + 0);
+        image(this.img, this.x - 0, this.y - 0, this.width + 150, this.height + 150);
 
       noStroke();
     }
