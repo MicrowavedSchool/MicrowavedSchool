@@ -19,6 +19,10 @@ var programCode = function(processingInstance) {
       delete keys[keyCode];
     };
 
+    var abyssBossCleared = false;
+
+
+
     var rectCollide = function(obj1, obj2) {
       return ((obj1.x + obj1.width + 0.1 > obj2.x) && (obj1.x < obj2.x + obj2.width + 0.1) && (obj1.y + obj1.height > obj2.y) && (obj1.y < obj2.y + obj2.height));
     };
@@ -667,9 +671,9 @@ var programCode = function(processingInstance) {
       fill(255,0,0);
       rect(this.x,this.y,this.width,this.height);
       if (Math.atan2(this.poi[1], this.poi[0]) > -Math.PI / 2 && Math.atan2(this.poi[1], this.poi[0]) <= Math.PI / 2)
-        image(this.img2, this.x - 0, this.y - 0, this.width + 150, this.height + 150);
+        image(this.img2, this.x - 25, this.y - 25, this.width + 75, this.height + 75);
       else
-        image(this.img, this.x - 0, this.y - 0, this.width + 150, this.height + 150);
+        image(this.img, this.x - 25, this.y - 25, this.width + 75, this.height + 75);
 
       noStroke();
     }
