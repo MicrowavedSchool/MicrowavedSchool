@@ -1294,17 +1294,17 @@ var programCode = function(processingInstance) {
 
       for (var playerNum = 0; playerNum < Players[l].length; playerNum++) {
         Players[l][playerNum].display();
-        if (Players[l][playerNum].complete && Level != 0) {
+        if (Players[l][playerNum].complete && (Level != 0 || abyssBossCleared)) {
           MapLocation[0] += 1;
           LevelPicker();
           LevelRestart();
         }
-        if (Players[l][playerNum].regress && Level != 0) {
+        if (Players[l][playerNum].regress && (Level != 0 || abyssBossCleared)) {
           MapLocation[0] -= 1;
           LevelPicker();
           LevelRestart();
         }
-        if (Players[l][playerNum].MapLevelUp && Level != 0) {
+        if (Players[l][playerNum].MapLevelUp && (Level != 0 || abyssBossCleared)) {
           MapLocation[1] -= 1;
           LevelPicker();
           LevelRestart();
@@ -1313,7 +1313,7 @@ var programCode = function(processingInstance) {
           globalHealth = 5;
           LevelRestart();
         }
-        if (Players[l][playerNum].MapLevelDown && Level != 0) {
+        if (Players[l][playerNum].MapLevelDown && (Level != 0 || abyssBossCleared)) {
           MapLocation[1] += 1;
           LevelPicker();
           LevelRestart();
