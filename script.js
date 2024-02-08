@@ -1236,10 +1236,12 @@ var programCode = function(processingInstance) {
               }));
               break;
             case "&":
-              AbyssEnemies[l].push(new abyssEnemy({
-                x: X,
-                y: Y,
-              }));
+              if(!abyssBossCleared){
+                AbyssEnemies[l].push(new abyssEnemy({
+                  x: X,
+                  y: Y,
+                }));
+              }
               break;
             case "*":
               GruntEnemy1s[l].push(new gruntEnemy1({
