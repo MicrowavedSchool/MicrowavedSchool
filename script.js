@@ -1360,10 +1360,12 @@ var programCode = function(processingInstance) {
       for (var abyssEnemyNum = 0; abyssEnemyNum < AbyssEnemies[l].length; abyssEnemyNum++) {
         for (var playerNum = 0; playerNum < Players[l].length; playerNum++) {
           if(AbyssEnemies[l][abyssEnemyNum].health > 0){
-          Players[l][playerNum].collide(AbyssEnemies[l][abyssEnemyNum]);
-          AbyssEnemies[l][abyssEnemyNum].collide(Players[l][playerNum]);
-          AbyssEnemies[l][abyssEnemyNum].ai(Players[l][playerNum]);
+            Players[l][playerNum].collide(AbyssEnemies[l][abyssEnemyNum]);
+            AbyssEnemies[l][abyssEnemyNum].collide(Players[l][playerNum]);
+            AbyssEnemies[l][abyssEnemyNum].ai(Players[l][playerNum]);
           }
+          else
+            abyssBossCleared = true;
         }
       }
 
