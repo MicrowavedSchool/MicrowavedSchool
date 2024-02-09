@@ -327,6 +327,25 @@ var programCode = function(processingInstance) {
       }
     };
 
+    block.prototype.collideNPC = function(object) {
+      switch (fourSliceCollide(object, this)) {
+        case 1:
+          object.y = this.y - object.height - 0.05 * this.height;
+          object.yVelocity = 0;
+          break;
+        case 3:
+          object.y = this.y + 1.1 * this.height;
+          object.yVelocity = 0;
+          break;
+        case 2:
+          object.x = this.x + 1.2 * this.width;
+          break;
+        case 4:
+          object.x = this.x - (0.3 * this.width) - object.width;
+          break;
+      }
+    };
+
     var Blocks = [];
 
     var pushBlock = function(config) {
